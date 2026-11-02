@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Maxwell Edegbe">
+
+    <title>Game</title>
+  </head>
+  <body>
+    <script>
+        let randomNumber = Math.floor(Math.random() * 10) +1;;
+        let number = -1;
+        let guessCount = 0;
+        while(randomNumber!=number){
+            number = prompt('Guess a number between 1 and 10');
+            
+            if(number>1 && number <=10){
+                if(number == randomNumber){
+                    alert(`You guessed it in ${guessCount} guesses!`);
+                }
+                else{
+                    if(number >= randomNumber) alert(`Your guess was too high, guess again`);
+                    if(number <= randomNumber) alert(`Your guess was too low, guess again`);
+                    guessCount++;   
+                }
+            }
+            else{
+                alert("enter valid number");
+            }
+        }
+    </script>
+    
+  </body>
+</html>
